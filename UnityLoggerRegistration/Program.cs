@@ -1,4 +1,6 @@
 ﻿using Unity;
+using Unity.Lifetime;
+
 
 namespace UnityLoggerRegistration
 {
@@ -7,11 +9,18 @@ namespace UnityLoggerRegistration
         // ReSharper disable once UnusedParameter.Local
         static void Main(string[] args)
         {
-            var container = new UnityContainer()
-                .RegisterType<ILogFormatter, ParenthesisFormatter>("Parenthesis")
-                .RegisterType<ILogFormatter, CurrentTimeFormatter>();
+            var container = new UnityContainer();
+            container
+                .RegisterType<DefaultFormattersList>(new ContainerControlledLifetimeManager())
+                .RegisterFactory<ILogger>(c =>
+                    new LoggerWithFormatters(c.Resolve<ConsoleLogger>(),
+                        c.Resolve<DefaultFormattersList>().FormattersList));
 
-            var logger = container.Resolve<Logger>();
+            container.Resolve<DefaultFormattersList>()
+                .Add<ParenthesisFormatter>()
+                .Add<CurrentTimeFormatter>();
+
+            var logger = container.Resolve<ILogger>();
             logger.Log("First message");
             logger.Log("Second message");
         }

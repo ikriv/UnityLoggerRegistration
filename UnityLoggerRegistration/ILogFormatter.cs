@@ -1,6 +1,6 @@
 ﻿namespace UnityLoggerRegistration
 {
-    internal interface ILogFormatter
+    public interface ILogFormatter
     {
         string Format(string message);
     }
