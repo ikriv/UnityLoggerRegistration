@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLoggerRegistration", "UnityLoggerRegistration\UnityLoggerRegistration.csproj", "{26FCFB20-3EB2-4CF2-830E-E0012E96CF48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26FCFB20-3EB2-4CF2-830E-E0012E96CF48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26FCFB20-3EB2-4CF2-830E-E0012E96CF48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26FCFB20-3EB2-4CF2-830E-E0012E96CF48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26FCFB20-3EB2-4CF2-830E-E0012E96CF48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59351263-2202-42AF-946D-CF12AEDD57B1}
+	EndGlobalSection
+EndGlobal
